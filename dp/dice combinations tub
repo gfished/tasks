@@ -1,14 +1,15 @@
 #include <iostream>
 #include <vector>
-
+#include <cstdint>
+ 
 using namespace std;
-
+ 
 int main()
 {
-    int n{0};
+    uint32_t n{0};
     cin >> n;
-    vector <int> dp(n+1);
-
+    vector <uint32_t> dp(n+1);
+ 
     dp[0] = 1;
     for (int i = 1; i <= n; ++i)
     {
