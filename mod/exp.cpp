@@ -8,7 +8,7 @@ using namespace std;
 int64_t make_mod(int64_t a)
 {
     int64_t tmp = a % MOD;
-    return (tmp >= 0)? tmp + MOD : tmp; 
+    return (tmp >= 0LL)? tmp + MOD : tmp; 
 }
 
 int64_t sum_mod(int64_t mod_a, int64_t mod_b)
