@@ -1,0 +1,36 @@
+#include <iostream>
+#include <bitset>
+#include <vector>
+
+using namespace std;
+
+void s(vector<int> primes)
+{
+    bitset<1299709> bs;
+    bs.set();
+    bs[0] = 0, bs[1] = 0;
+
+    for (int i = 2; i*i < 1299709; ++i)
+    {
+        if (bs[i])
+        {
+            primes.push_back(i);
+            for (int j = i*i; j < 1299709; j+=i)
+            {
+                bs[j] = 0;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int n, k;
+    vector<int> primes(100000);
+    cin >> n;
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> k;
+        cout << primes[k-1];
+    }
+}
