@@ -9,7 +9,7 @@ int f(int n)
     for (int a = 0; a*a < n; ++a)
     {
         int tmp = sqrt(n - a*a);
-        if (tmp*tmp == (n - a*a)) ++counter;
+        if (tmp*tmp == (n - a*a)) ++counter;    //???
     }
     return counter;
 }
