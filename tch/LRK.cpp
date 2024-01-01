@@ -9,7 +9,6 @@ using namespace std;
 
 void s(vector<int> primes)
 {
-    int counter = 0;
     bitset<MAXIMUM> bs;
     bs.set();
     bs[0] = 0, bs[1] = 0;
